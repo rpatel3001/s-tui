@@ -7,6 +7,12 @@
 
 Stress-Terminal UI, s-tui, monitors CPU temperature, frequency, power and utilization in a graphical way from the terminal.
 
+--------
+
+Forked to use [my fork](https://github.com/rpatel3001/sensors.py) of sensors.py (lm-sensors python bindings) instead of psutil to get fan and temperature sensor data with the lm-sensors labels.
+
+--------
+
 ## Screenshot
 
 ![](https://github.com/amanusk/s-tui/blob/master/ScreenShots/s-tui-1.0.gif?raw=true)

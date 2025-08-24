@@ -22,7 +22,8 @@ from __future__ import absolute_import
 import warnings
 import logging
 from collections import OrderedDict
-import psutil
+import sensors as psutil
+import atexit
 
 from s_tui.sources.source import Source
 
@@ -38,6 +39,8 @@ class TempSource(Source):
             ".*FileNotFound.*",
         )
         try:
+            psutil.init()
+            atexit.register(psutil.cleanup)
             if psutil.sensors_temperatures():
                 self.is_available = True
         except AttributeError:

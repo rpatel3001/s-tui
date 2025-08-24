@@ -21,7 +21,7 @@
 from __future__ import absolute_import
 
 import logging
-import psutil
+import sensors as psutil
 from s_tui.sources.source import Source
 
 
